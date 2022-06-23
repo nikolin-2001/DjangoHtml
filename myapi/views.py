@@ -1,6 +1,12 @@
 from rest_framework import viewsets
+from django.shortcuts import render
 from .models import Shoes, Jeans, Tshirt, Sweatshirts
 from .serializers import ShoesSerializer, JeansSerializer, TshirtSerializer, SweathirtsSerializer
+
+def index(request):
+    shoes = Shoes.objects.all().order_by('-id')
+    context = {'shoes': shoes}
+    return render(request, 'myapi/index.html', context)
 
 class ShoesViewSet(viewsets.ModelViewSet):
     queryset = Shoes.objects.all().order_by('name')
