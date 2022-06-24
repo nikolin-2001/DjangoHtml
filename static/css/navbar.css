@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+.content-sidebar {
+    border-right: 1px solid #505050;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-header {
+    grid-   column: 2/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 60px;
+}
+:root {
+    --swiper-theme-color: #606060;
+}
+.content{
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+
+}
+
+.header-navbar
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 100px;
+    z-index: 100000;
+}
+.header-navbar.sticky
+{
+    padding: 5px 100px;
+    background: #fff;
+}
+.header-navbar .logo
+{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    font-family: 'Yeseva One', cursive;
+
+}
+
+.header-navbar .ul-navbar
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-navbar .ul-navbar .li-navbar
+{
+    position: relative;
+    list-style: none;
+}
+
+.header-navbar .ul-navbar .li-navbar
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+.header-navbar.sticky .logo
+{
+    color: #000000;
+}
+.header-navbar.sticky  .ul-navbar .li-navbar .a-navbar
+{
+    color: #000000;
+}
+
+
+
+/* Кнопка навбар!*/
+/* Кнопка навбар!*/
+/* Кнопка навбар!*/
+/* Кнопка навбар!*/
+.a-navbar
+{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 550;
+
+    overflow: hidden;
+    transition: 0.2s;
+}
+.a-navbar:hover
+{
+    color: #000000;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.85s;
+}
+.a-navbar .span-navbar
+{
+    position: absolute;
+    display: block;
+}
+.a-navbar .span-navbar:nth-child(1)
+{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+}
+.a-navbar:hover .span-navbar:nth-child(1)
+{
+    left: 100%;
+    transition: 0.8s;
+}
+.a-navbar .span-navbar:nth-child(3)
+{
+    bottom : 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#2196f3);
+}
+.a-navbar:hover .span-navbar:nth-child(3)
+{
+    right: 100%;
+    transition: 0.8s;
+    transition-delay: 0.4s;
+}
+
+
+
+.a-navbar .span-navbar:nth-child(2)
+{
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+.a-navbar:hover .span-navbar:nth-child(2)
+{
+    top: 100%;
+    transition: 0.8s;
+    transition-delay: 0.20s;
+}
+
+.a-navbar .span-navbar:nth-child(4)
+{
+    bottom: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+.a-navbar:hover .span-navbar:nth-child(4)
+{
+    bottom: 100%;
+    transition: 0.8s;
+    transition-delay: 0.40s;
+}

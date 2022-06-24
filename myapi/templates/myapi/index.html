@@ -1,13 +1,18 @@
+{% include "myapi/navbar.html" %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>WooShop</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" type="text/css">
 </head>
-<body>
-    <div class="card-shoes">
+<body class="body-cart body-navbar content">
+
+<table>
+    <tr><td><div class="card-shoes">
         <div class="imgBx">
             <img src="{% static 'images/shoes/Adidas_originals_forum.jpg' %}" alt="">
         </div>
@@ -15,7 +20,7 @@
         <div class="details">
             <h3>Adidas Forum Mid<br><span>Мужские кроссовки</span></h3>
             <h4>Описание</h4>
-            <p>Премиальные высокие кроссовки в баскетбольном стиле.</p>
+            <p>Эти кроссовки adidas Forum похожи в чем-то на межсезонье. Они выполнены в контрастных цветах, которые подходят к разным погодным условиям и настроению. Но детали, которые сделали Forum классикой в 1984 году, остаются неизменными.</p>
             <h4>Размер</h4>
             <ul class="size">
                 <li>36</li>
@@ -24,16 +29,210 @@
                 <li>41</li>
                 <li>42</li>
             </ul>
+            <div class="button-buy">
+                <a class="a-button" href="#">
+                    <span data-text="О">О</span>
+                    <span data-text="Т">Т</span>
+                    <span data-text="К">К</span>
+                    <span data-text="Р">Р</span>
+                    <span data-text="Ы">Ы</span>
+                    <span data-text="Т">Т</span>
+                    <span data-text="Ь">Ь</span>
+                </a>
+            </div>
             <div class="group">
                 <h2><sup>₽</sup>1999<small>.99</small></h2>
-                <a href="#">Купить</a>
             </div>
         </div>
+    </div></td>
+    <td><div class="card-shoes">
+        <div class="imgBx">
+            <img src="{% static 'images/shoes/nike_air_force_1.jpg' %}" alt="">
+        </div>
 
-    </div>
+        <div class="details">
+            <h3>Nike Air Force 1<br><span>Мужские кроссовки</span></h3>
+            <h4>Описание</h4>
+            <p>Сохраняй комфорт в кроссовках Nike Air Force 1. Классическая кожа и детали, благодаря которым эти кроссовки стали легендой, сделают тебя заметнее на городских улицах.</p>
+
+            <h4>Размер</h4>
+            <ul class="size">
+                <li>36</li>
+                <li>38</li>
+                <li>40</li>
+                <li>41</li>
+                <li>42</li>
+            </ul>
+            <div class="button-buy">
+                <a class="a-button" href="#">
+                    <span data-text="О">О</span>
+                    <span data-text="Т">Т</span>
+                    <span data-text="К">К</span>
+                    <span data-text="Р">Р</span>
+                    <span data-text="Ы">Ы</span>
+                    <span data-text="Т">Т</span>
+                    <span data-text="Ь">Ь</span>
+                </a>
+            </div>
+            <div class="group">
+                <h2><sup>₽</sup>1999<small>.99</small></h2>
+            </div>
+        </div>
+    </div></td>
+    <td><div class="card-shoes">
+        <div class="imgBx">
+            <img src="{% static 'images/shoes/Adidas_NMD_R1.jpg' %}" alt="">
+        </div>
+
+        <div class="details">
+            <h3>Adidas Forum Mid<br><span>Мужские кроссовки</span></h3>
+            <h4>Описание</h4>
+            <p>Эти кроссовки adidas Forum похожи в чем-то на межсезонье. Они выполнены в контрастных цветах, которые подходят к разным погодным условиям и настроению. Но детали, которые сделали Forum классикой в 1984 году, остаются неизменными.</p>
+            <h4>Размер</h4>
+            <ul class="size">
+                <li>36</li>
+                <li>38</li>
+                <li>40</li>
+                <li>41</li>
+                <li>42</li>
+            </ul>
+            <div class="button-buy">
+                <a class="a-button" href="#">
+                    <span data-text="О">О</span>
+                    <span data-text="Т">Т</span>
+                    <span data-text="К">К</span>
+                    <span data-text="Р">Р</span>
+                    <span data-text="Ы">Ы</span>
+                    <span data-text="Т">Т</span>
+                    <span data-text="Ь">Ь</span>
+                </a>
+            </div>
+            <div class="group">
+                <h2><sup>₽</sup>1999<small>.99</small></h2>
+            </div>
+            </div>
+        </div>
+    </div></td></tr>
+
+
+    <tr><td><div class="card-shoes">
+        <div class="imgBx">
+            <img src="{% static 'images/shoes/Adidas_originals_forum.jpg' %}" alt="">
+        </div>
+
+        <div class="details">
+            <h3>Adidas Forum Mid<br><span>Мужские кроссовки</span></h3>
+            <h4>Описание</h4>
+            <p>Эти кроссовки adidas Forum похожи в чем-то на межсезонье. Они выполнены в контрастных цветах, которые подходят к разным погодным условиям и настроению. Но детали, которые сделали Forum классикой в 1984 году, остаются неизменными.</p>
+            <h4>Размер</h4>
+            <ul class="size">
+                <li>36</li>
+                <li>38</li>
+                <li>40</li>
+                <li>41</li>
+                <li>42</li>
+            </ul>
+            <div class="button-buy">
+                <a class="a-button" href="#">
+                    <span data-text="О">О</span>
+                    <span data-text="Т">Т</span>
+                    <span data-text="К">К</span>
+                    <span data-text="Р">Р</span>
+                    <span data-text="Ы">Ы</span>
+                    <span data-text="Т">Т</span>
+                    <span data-text="Ь">Ь</span>
+                </a>
+            </div>
+            <div class="group">
+                <h2><sup>₽</sup>1999<small>.99</small></h2>
+            </div>
+        </div>
+    </div></td>
+        <td><div class="card-shoes">
+            <div class="imgBx">
+                <img src="{% static 'images/shoes/nike_air_force_1.jpg' %}" alt="">
+            </div>
+
+            <div class="details">
+                <h3>Nike Air Force 1<br><span>Мужские кроссовки</span></h3>
+                <h4>Описание</h4>
+                <p>Сохраняй комфорт в кроссовках Nike Air Force 1. Классическая кожа и детали, благодаря которым эти кроссовки стали легендой, сделают тебя заметнее на городских улицах.</p>
+
+                <h4>Размер</h4>
+                <ul class="size">
+                    <li>36</li>
+                    <li>38</li>
+                    <li>40</li>
+                    <li>41</li>
+                    <li>42</li>
+                </ul>
+                <div class="button-buy">
+                    <a class="a-button" href="#">
+                        <span data-text="О">О</span>
+                        <span data-text="Т">Т</span>
+                        <span data-text="К">К</span>
+                        <span data-text="Р">Р</span>
+                        <span data-text="Ы">Ы</span>
+                        <span data-text="Т">Т</span>
+                        <span data-text="Ь">Ь</span>
+                    </a>
+                </div>
+                <div class="group">
+                    <h2><sup>₽</sup>1999<small>.99</small></h2>
+                </div>
+            </div>
+        </div></td>
+        <td><div class="card-shoes">
+            <div class="imgBx">
+                <img src="{% static 'images/shoes/Adidas_NMD_R1.jpg' %}" alt="">
+            </div>
+
+            <div class="details">
+                <h3>Adidas Forum Mid<br><span>Мужские кроссовки</span></h3>
+                <h4>Описание</h4>
+                <p>Эти кроссовки adidas Forum похожи в чем-то на межсезонье. Они выполнены в контрастных цветах, которые подходят к разным погодным условиям и настроению. Но детали, которые сделали Forum классикой в 1984 году, остаются неизменными.</p>
+                <h4>Размер</h4>
+                <ul class="size">
+                    <li>36</li>
+                    <li>38</li>
+                    <li>40</li>
+                    <li>41</li>
+                    <li>42</li>
+                </ul>
+                <div class="button-buy">
+                    <a class="a-button" href="#">
+                        <span data-text="О">О</span>
+                        <span data-text="Т">Т</span>
+                        <span data-text="К">К</span>
+                        <span data-text="Р">Р</span>
+                        <span data-text="Ы">Ы</span>
+                        <span data-text="Т">Т</span>
+                        <span data-text="Ь">Ь</span>
+                    </a>
+                </div>
+                <div class="group">
+                    <h2><sup>₽</sup>1999<small>.99</small></h2>
+                </div>
+            </div>
+        </div>
+            </div></td></tr>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
 
 
 
