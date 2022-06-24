@@ -75,7 +75,6 @@
 .card-shoes:hover .details
 {
     left: 300px;
-
 }
 
 .card-shoes .details::before
@@ -88,7 +87,6 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid #fff;
-
 }
 .card-shoes .details h3
 {
@@ -188,6 +186,7 @@
     text-transform: uppercase;
     font-weight: 500;
     color: #4ba9e9;
+
 }
 
 table{
@@ -198,6 +197,7 @@ table{
     display: grid;
     height: 100%;
     gap: 14%;
+
 }
 
 
@@ -261,3 +261,17 @@ table{
 {
     transform: translateY(0%);
 }
+
+table{
+    position: relative;
+    max-width: 70%;
+    display: grid;
+    padding-left: 4%;
+}
+
+tr {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px auto;
+    display: grid;
+}
+

@@ -4,7 +4,7 @@ from .models import Shoes, Jeans, Tshirt, Sweatshirts
 class ShoesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Shoes
-        fields = ('name', 'descriprion', 'price')
+        fields = ('name', 'descriprion', 'price', 'size36', 'size37', 'size38', 'size39', 'size40', 'size41', 'size42', 'size43', 'size44', 'sex', 'images')
 
 
 class JeansSerializer(serializers.HyperlinkedModelSerializer):
