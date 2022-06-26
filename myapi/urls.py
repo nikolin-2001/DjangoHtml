@@ -13,7 +13,8 @@ router.register(r'Sweatshirts', views.SweatshirtsViewSet)
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('catalog/', views.PashalkaoneCreate.as_view(), name='Catalog'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

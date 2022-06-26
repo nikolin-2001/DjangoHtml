@@ -1,0 +1,20 @@
+{% include "myapi/navbar.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WooShop</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/catalog-form.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}" type="text/css">
+
+</head>
+
+<body class="body-cart body-navbar content">
+    <div class="content-sidebar">
+        {% include "myapi/sidebar.html" %}
+    </div>
+</body>
+</html>

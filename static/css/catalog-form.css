@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Proppins', sans-serif;
+}
+.body-cart
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#4ba9e9, #4ba9e9 15%, #fff 95%, #fff 20%);
+    background-repeat: no-repeat;
+}
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+body, html {
+    height: 100vh;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    grid-template-rows: 98px 1fr;
+    height: 100%;
+    gap: 60px
+}
+
+.content-sidebar {
+    border-right: 1px solid #505050;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.content-sidebar__list {
+    list-style: none;
+    margin-bottom: 60px;
+}
+.content-sidebar__item {
+    margin-top: 50px;
+    padding-left: 0;
+}
+.content-sidebar__link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

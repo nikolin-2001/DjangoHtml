@@ -51,3 +51,5 @@ class Sweatshirts(models.Model):
         verbose_name = 'кофту'
         verbose_name_plural = 'кофты'
 
+class Catalog(models.Model):
+    text = models.TextField('Текст', max_length=5000)
