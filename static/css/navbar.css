@@ -149,7 +149,7 @@
 .a-navbar:hover .span-navbar:nth-child(3)
 {
     right: 100%;
-    transition: 0.6s;
+    transition  : 0.6s;
     transition-delay: 0.2s;
 }
 

@@ -1,11 +1,10 @@
-
 .navigation
 {
     position: fixed;
     top: 120px;
     bottom: 20px;
     width: 70px;
-    height: 450px;
+    height: 395px;
     border-radius: 10px;
     box-sizing: initial;
     border-left: 5px solid #2196f3;
@@ -15,13 +14,13 @@
 }
 .navigation.active
 {
-    width: 200px;
+    width: 210px;
 }
 
 .navigation ul
 {
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 0;
     width: 100%;
     padding-left: 5px;
@@ -94,23 +93,33 @@
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
+    fill: #ffffff;
 }
 .navigation ul li.active a
 {
+    margin-top: 10px;
     color: #333;
 }
 
+.navigation li.active svg{
+    fill: #333;
+}
 
-
-
-
-.navigation ul li a .saidbar-icon
+.navigation svg{
+    padding-left: 7px;
+    margin-top: 7px;
+}
+.navigation ion-icon
+{
+    margin-left: 8px;
+}
+.navigation ul li a .saidbar-icon svg
 {
     position: relative;
     display: block;
-    min-height: 60px;
-    height: 60px;
+    min-height: 42px;
+    height: 42px;
     line-height: 70px;
     text-align: center;
 }
@@ -123,10 +132,11 @@
 {
     position: relative;
     display: block;
-    padding-left: 25px;
+    padding-left: 16px;
     height: 60px;
     line-height: 60px;
     white-space: normal;
+    overflow: hidden;
 }
 
 .toggle
@@ -147,7 +157,7 @@
 
 .toggle.active
 {
-    margin-left: 120px;
+    margin-left: 150px;
     transition-property: margin-left;
     transition-duration: 0.6s;
 }
