@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,600;1,100;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#4ba9e9, #4ba9e9 15%, #fff 95%, #fff 20%);
+    background-repeat: no-repeat;
+}
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.text1
+{
+    position: absolute;
+    width: 611px;
+    height: 122px;
+    left: 435px;
+    top: 242px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.text2 {
+    position: absolute;
+    width: 877px;
+    height: 82px;
+    left: 302px;
+    top: 433px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 100;
+    font-size: 35px;
+    line-height: 122.9%;
+    text-align: center;
+    color: #000000;
+}
+.preview-button
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 26px 66px;
+    gap: 10px;
+    position: absolute;
+    width: 378px;
+    height: 82px;
+    left: 551px;
+    top: 532px;
+    background: #E79345;
+    box-shadow: 0px 8px 13px rgba(231, 147, 69, 0.41);
+    border-radius: 27px;
+}
+.preview-t
+{
+    width: 246px;
+    height: 30px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-shadow: -1px 3px 4px rgba(0, 0, 0, 0.23);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+a{
+    text-decoration: none;
+
+}
+.preview-images{
+    position: absolute;
+    width: 700px;
+    height: 230px;
+    left: 378px;
+    top: 212px;
+
+}

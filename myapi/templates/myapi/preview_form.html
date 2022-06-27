@@ -1,0 +1,26 @@
+{% include "myapi/components/navbar.html" %}
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/preview-form.css' %}" type="text/css">
+</head>
+<body>
+    <div class="offer-construct">
+        <img src="{% static 'images/preview/prewiew.png' %}" class="preview-images">
+        <p class="text1">Одеваться экономно, </br>
+            но со вкусом можно</p>
+        <p class="Text2">WooClothes - Онлайн магазин качественной,<br>
+            красивой одежды</p>
+        <span class="preview-button"><a href="/products" class="preview-t">Открыть каталог</a></span>
+
+    </div>
+</body>
+</html>

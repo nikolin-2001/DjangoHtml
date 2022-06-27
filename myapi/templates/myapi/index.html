@@ -1,18 +1,22 @@
-{% include "myapi/navbar.html" %}
+{% include "myapi/components/navbar.html" %}
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <title>WooShop</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/pagination.css' %}" type="text/css">
 </head>
 <body class="body-cart body-navbar content">
+{% include "myapi/components/sidebar.html" %}
 
 <table>
-            {% for s in shoes %}
+
+            {% for s in page_obj%}
         <td>
             <div class="card-shoes">
                 <div class="imgBx">
@@ -47,5 +51,81 @@
         </td>
             {% endfor %}
 </table>
+
+<!--has other нужен для того, чтобы не отображалась единственная страница.-->
+{% if page_obj.has_other_pages %}
+<nav class="list-pages">
+    <ul class="ul-page">
+        <!--Кнопка назад-->
+        {% if page_obj.has_previous %}
+            <li class="page-num li-page-next">
+                <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+            </li>
+
+
+        <!--Оформление нумерации-->
+        {% endif %}
+        {% for s in page_obj.paginator.page_range %}
+        {% if page_obj.number == s %}
+        <li class="page-active page-num-active">{{ s }}</li>
+		{% elif s >= page_obj.number|add:-2 and s <= page_obj.number|add:2  %}
+        <li class="page-num li-page">
+               <a href="?page={{ s }}" class="a-page" >{{s}}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        <!--Кнопка вперёд-->
+        {% if page_obj.has_next %}
+        <li class="page-num li-page-next">
+            <a href="?page={{ page_obj.next_page_number }}">&gt;</a>
+        </li>
+{% endif %}
+    </ul>
+</nav>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation')
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+
+        }
+
+        let list = document.querySelectorAll('.list');
+        for (let i=0; i<list.length; i++){
+            list[i].onclick = function(){
+                let j = 0;
+                while (j < list.length){
+                    list[j++].className = 'list';
+                }
+                list[i].className = 'list active';
+            }
+        }
+    </script>
 </html>

@@ -5,6 +5,16 @@ SEX_CHOICES = [
     ('Женские', 'Женские кроссовки'),
 ]
 
+FIRM_CHOICES = [
+    ('Nike', 'Nike'),
+    ('Adidas', 'Adidas'),
+    ('Reebok', 'Reebok'),
+    ('Puma', 'Puma'),
+    ('New Balance', 'New Balance'),
+    ('Asics', 'Asics'),
+    ('Lacoste', 'Lacoste')
+]
+
 class Size(models.Model):
     name = models.CharField('Размер',max_length=250)
 
@@ -18,10 +28,10 @@ class Shoes(models.Model):
     price = models.CharField('Стоимость',  max_length=60)
     size = models.ManyToManyField(Size)
     images = models.ImageField(null=True, blank=True, upload_to='images/', verbose_name='Изображение')
+    firm = models.CharField(choices=FIRM_CHOICES, max_length=100)
 
     def __str__(self):
         return self.name
-
 
     class Meta:
         verbose_name = 'обувь'
@@ -53,3 +63,16 @@ class Sweatshirts(models.Model):
 
 class Catalog(models.Model):
     text = models.TextField('Текст', max_length=5000)
+
+class Preview(models.Model):
+    text = models.TextField('Текст', max_length=5000)
+
+class Category(models.Model):
+    name = models.CharField("Название категории", max_length=100)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Жанр"
+        verbose_name_plural = "Жанры"

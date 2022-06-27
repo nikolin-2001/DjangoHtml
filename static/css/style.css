@@ -17,7 +17,6 @@
 
 .card-shoes
 {
-
     position: relative;
     width: 300px;
     height: 415px;
@@ -264,9 +263,9 @@ table{
 
 table{
     position: relative;
-    max-width: 70%;
+    max-width: 60%;
     display: grid;
-    padding-left: 4%;
+    padding-left: 10%;
 }
 
 tr {
