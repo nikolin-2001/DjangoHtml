@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from .validators import validate_file_extension
 
 SEX_CHOICES = [
     ('Мужские', 'Мужские кроссовки'),
@@ -20,6 +22,21 @@ class Size(models.Model):
 
     def __str__(self):
         return self.name
+class Category(models.Model):
+    name = models.CharField("Название категории", max_length=100, db_index=True)
+    images = models.ImageField(null=True, blank=True, upload_to='images/category/', verbose_name='Изображение')
+    imageswhite = models.ImageField(null=True, blank=True, upload_to='images/category/', verbose_name='Белое изображение')
+
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('category', kwargs={'cat_id': self.pk})
+
+    class Meta:
+        verbose_name = "Категория"
+        verbose_name_plural = "Категории"
 
 class Shoes(models.Model):
     name = models.CharField('Название обуви',  max_length=200)
@@ -29,13 +46,19 @@ class Shoes(models.Model):
     size = models.ManyToManyField(Size)
     images = models.ImageField(null=True, blank=True, upload_to='images/', verbose_name='Изображение')
     firm = models.CharField(choices=FIRM_CHOICES, max_length=100)
+    cat = models.ForeignKey(Category, null=True, on_delete=models.PROTECT)
 
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('open', kwargs={'shoes_id': self.pk})
+
     class Meta:
         verbose_name = 'обувь'
         verbose_name_plural = 'обувь'
+
+
 
 class Jeans(models.Model):
     name = models.CharField('Название джинс', max_length=200)
@@ -67,12 +90,3 @@ class Catalog(models.Model):
 class Preview(models.Model):
     text = models.TextField('Текст', max_length=5000)
 
-class Category(models.Model):
-    name = models.CharField("Название категории", max_length=100)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = "Жанр"
-        verbose_name_plural = "Жанры"

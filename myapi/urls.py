@@ -15,6 +15,9 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('catalog/', views.CatalogCreate.as_view(), name='Catalog'),
     path('', views.PreviewCreate.as_view(), name='preview'),
+    path('open/<int:shoes_id>/', views.product_open, name='open'),
+    path('category/<int:cat_id>/', views.show_category, name='category')
+
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -6,55 +6,53 @@
             <ion-icon name="close-outline" class="close"></ion-icon>
         </div>
         <ul class="saidbar-ul">
-            <li class="list saidbar-li active">
-                <b></b>
-                <b></b>
-                <a class="saidbar-a" href="#">
-                    <span class="saidbar-icon">
-                        {% include "myapi/components/images-sidebar/clothes.svg" %}
+	{% if cat_selected == 0 %}
+             <li class="list saidbar-li"
+                 style="position: relative;
+                        list-style: none;
+                        width: 100%;
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        background: #fff;">
+                <a class="saidbar-a">
+                    <span class="saidbar-icon" style="fill:#333">
+                        <img src="{% static 'images/saidbar/clothes_black.png' %}" alt="">
                     </span>
-                    <span class="saidbar-title">Дом</span>
+                    <span class="saidbar-title" style="color: #333">Все товары</span>
                 </a>
             </li>
-            <li class="list saidbar-li">
-                <b></b>
-                <b></b>
-                <a class="saidbar-a" href="#" >
+                	{% else %}
+    <li class="list saidbar-li">
+
+                <a class="saidbar-a" href="{% url 'index' %}">
                     <span class="saidbar-icon">
-                           {% include "myapi/components/images-sidebar/sneakers.svg" %}
+                        <img src="{% static 'images/saidbar/clothes_white.png' %}" alt="">
                     </span>
-                    <span class="saidbar-title">Кроссовки</span>
+                    <span class="saidbar-title">Все товары</span>
                 </a>
             </li>
-            <li class="list saidbar-li">
-                <b></b>
-                <b></b>
-                <a class="saidbar-a" href="#">
-                    <span class="saidbar-icon">
-                        {% include "myapi/components/images-sidebar/shirt.svg" %}
-                    </span>
-                    <span class="saidbar-title">Футболки</span>
+{% endif %}
+{% for c in cats %}
+	{% if c.pk == cat_selected %}
+            <li class="list saidbar-li"
+                style="position: relative;
+                       list-style: none;
+                       width: 100%;
+                       border-top-left-radius: 20px;
+                       border-bottom-left-radius: 20px;
+                       background: #fff;">
+                <a class="saidbar-a">
+                    <span class="saidbar-icon"><img src="{{c.images.url}}"></span>
+                    <span class="saidbar-title" style="color: #333">{{c.name}}</span>
                 </a>
-            </li>
+                	{% else %}
             <li class="list saidbar-li">
-                <b></b>
-                <b></b>
-                <a class="saidbar-a" href="#">
-                    <span class="saidbar-icon">
-                        {% include "myapi/components/images-sidebar/sweater.svg" %}
-                    </span>
-                    <span class="saidbar-title">Кофты</span>
+                   <a class="saidbar-a" href="{{ c.get_absolute_url }}">
+                        <span class="saidbar-icon"><img src="{{c.imageswhite.url}}"></span>
+                    <span class="saidbar-title">{{c.name}}</span>
                 </a>
-            </li>
-            <li class="list saidbar-li">
-                <b></b>
-                <b></b>
-                <a class="saidbar-a" href="#">
-                    <span class="saidbar-icon">
-                        {% include "myapi/components/images-sidebar/baby.svg" %}
-                    </span>
-                    <span class="saidbar-title">Детская одежда</span>
-                </a>
+{% endif %}
+{% endfor %}
             </li>
         </ul>
     </div>
