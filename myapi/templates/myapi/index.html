@@ -15,7 +15,6 @@
 {% include "myapi/components/sidebar.html" %}
 
 <table>
-
             {% for s in page_obj%}
         <td>
             <div class="card-shoes">
@@ -24,7 +23,7 @@
                 </div>
                 <div class="details">
                     <h3>{{s.name}}<br><span>{{s.sex}}</span></h3>
-                    <h4>Описание</h4>
+                    <h4 style="margin-top: 6px">Описание</h4>
                     <p>{{s.descriprion}}</p>
                     <h4>Размер</h4>
                     <ul class="size">
@@ -52,55 +51,7 @@
             {% endfor %}
 </table>
 
-<!--has other нужен для того, чтобы не отображалась единственная страница.-->
-{% if page_obj.has_other_pages %}
-<nav class="list-pages">
-    <ul class="ul-page">
-        <!--Кнопка назад-->
-        {% if page_obj.has_previous %}
-            <li class="page-num li-page-next">
-                <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
-            </li>
-
-
-        <!--Оформление нумерации-->
-        {% endif %}
-        {% for s in page_obj.paginator.page_range %}
-        {% if page_obj.number == s %}
-        <li class="page-active page-num-active">{{ s }}</li>
-		{% elif s >= page_obj.number|add:-2 and s <= page_obj.number|add:2  %}
-        <li class="page-num li-page">
-               <a href="?page={{ s }}" class="a-page" >{{s}}</a>
-        </li>
-        {% endif %}
-        {% endfor %}
-        <!--Кнопка вперёд-->
-        {% if page_obj.has_next %}
-        <li class="page-num li-page-next">
-            <a href="?page={{ page_obj.next_page_number }}">&gt;</a>
-        </li>
-{% endif %}
-    </ul>
-</nav>
-{% endif %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% include "myapi/components/pagination.html" %}
 
 
 </body>

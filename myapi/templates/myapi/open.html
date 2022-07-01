@@ -1,0 +1,86 @@
+{% include "myapi/components/navbar.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>WooShop</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/pagination.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body class="body-cart body-navbar content">
+<div class="container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img class="swiper-slide__image" src="{{open.images.url}}" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img class="swiper-slide__image" src="{{open.images2.url}}" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img class="swiper-slide__image" src="{{open.images3.url}}" alt="">
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+<!--Описание товара-->
+        <div class="name-product">
+            <p>{{open.name}}</p>
+        </div>
+        <div class="description-product">
+            <p>{{open.descriprion_full}}</p>
+        </div>
+        <div class="price-product">
+            <a href="#"><div class="button-price text-price"><span>
+                            <sup>₽</sup>{{open.price}}<small>.99</small></>
+            </span></div></a>
+        </div>
+        <div class="price-product">
+            <a href="#" class="text-buy">
+                <div class="button-buy">
+                    <span>
+                        Купить
+                    </span>
+                </div>
+            </a>
+    </div>
+    <p class="size-text-product">Размеры:</p>
+    <div class="button-size"><span> </span></div>
+    <ul class="size-product">
+        {% for obj in open.size.all %}
+        <li>{{obj}}<pre>    </pre></li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>

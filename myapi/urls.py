@@ -4,18 +4,12 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-router = routers.DefaultRouter()
-router.register(r'Jeans', views.JeansViewSet)
-router.register(r'Tshirt', views.TshirtViewSet)
-router.register(r'Sweatshirts', views.SweatshirtsViewSet)
-
 
 urlpatterns = [
     path('products', views.index, name='index'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('catalog/', views.CatalogCreate.as_view(), name='Catalog'),
     path('', views.PreviewCreate.as_view(), name='preview'),
-    path('open/<int:shoes_id>/', views.product_open, name='open'),
+    path('open/<slug:shoes_slug>/', views.product_open, name='open'),
     path('category/<int:cat_id>/', views.show_category, name='category')
 
 ]

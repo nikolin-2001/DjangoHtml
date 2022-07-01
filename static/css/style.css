@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Proppins', sans-serif;
 }
 .body-cart
 {
@@ -116,7 +115,7 @@
 {
     color: #fff;
     opacity: 0.85;
-    font-size: 0.8em;
+    font-size: 0.95em;
 }
 
 .card-shoes .details .size
