@@ -55,9 +55,6 @@ class PreviewCreate(CreateView):
         self.object = form.save()
         return render(request, 'myapi/preview_form.html', context)
 
-def about(request):
-    return render(request, 'myapi/about.html')
-
 
 class RegisterUser(CreateView):
     form_class = RegisterUserForm

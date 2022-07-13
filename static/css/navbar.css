@@ -94,7 +94,7 @@
 
 
 
-/* Кнопка навбар!*/
+    /* Кнопка навбар!*/
 /* Кнопка навбар!*/
 /* Кнопка навбар!*/
 /* Кнопка навбар!*/
@@ -183,4 +183,23 @@
     bottom: 100%;
     transition: 0.6s;
     transition-delay: 0.30s;
+}
+
+.navbar-cart
+{
+    width: 330px;
+    height: 330px;
+    background: #000000;
+    border-radius: 20%;
+}
+.img-cart
+{
+    width: 20px;
+    fill: #000000;
+}
+.li-navbar-cart
+{
+    display: block;
+    position: relative;
+    left: 300px;
 }

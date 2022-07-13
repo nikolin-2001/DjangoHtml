@@ -1,3 +1,5 @@
+{% load static %}
+
 <header class="header-navbar content-sidebar content-header " >
     <a href="{% url 'preview' %}" class="logo">WooClothes </a>
     <ul class="ul-navbar">
@@ -14,13 +16,14 @@
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
         Catalog</a></li>
-        <li class="li-navbar"><a class="a-navbar" href="{% url 'about' %}">
+        <li class="li-navbar"><a class="a-navbar" href="#">
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
-        About</a></li>
-				{% if request.user.is_authenticated %}
+            Basket</a></li>
+        </a></li>
+        {% if request.user.is_authenticated %}
         <li class="li-navbar"><a class="a-navbar" href="{% url 'index' %}">
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
@@ -48,6 +51,7 @@
             <span class="span-navbar"></span>
             Login</a>
         </li>
+
 				{% endif %}
 
     </ul>
