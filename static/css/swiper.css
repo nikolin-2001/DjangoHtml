@@ -3,23 +3,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
-
 }
+
 .swiper {
     grid-column: 1 / 1;
     left: 30px;
     width: 680px;
     height: 680px;
     border-radius: 30px;
-
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-
-            /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -48,10 +45,11 @@
     width: 700px;
     height: 73px;
     top: 82px;
+    letter-spacing: 4px;
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 55px;
     line-height: 73px;
     color: #000000;
     text-shadow: -4px 4px 3px rgba(0, 0, 0, 0.25);
@@ -79,21 +77,13 @@
 
 .text-price
 {
-    position: absolute;
-    width: 124px;
-    height: 30px;
-    left: 966px;
-    top: 598px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
     font-size: 25px;
     line-height: 30px;
     text-align: justify;
-
     color: #FFFFFF;
-
     text-shadow: -3px 3px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -102,47 +92,45 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 18px 25px;
+    padding: 18px 30px;
     gap: 10px;
-
     position: absolute;
     width: 227px;
     height: 82px;
-    left: 934px;
+    left: 930px;
     top: 540px;
-
     background: #E74545;
     box-shadow: 0px 8px 13px rgba(231, 147, 69, 0.41), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 27px;
+    transform: translate(0, 0) perspective(500px) rotateY(15deg);
+    overflow: hidden;
 }
-
 
 .button-buy
 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 26px 66px;
+    padding: 26px 55px;
     gap: 10px;
-
+    letter-spacing: 2px;
     position: absolute;
     width: 234px;
     height: 82px;
-    left: 1100px;
+    left: 1090px;
     top: 540px;
-
     background: #E79345;
     box-shadow: 0px 8px 13px rgba(231, 147, 69, 0.41);
     border-radius: 27px;
+    transform: translate(0, 0) perspective(500px) rotateY(-15deg);
+    overflow: hidden;
 }
 .text-buy
 {
-    width: 102px;
-    height: 30px;
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 30px;
     color: #FFFFFF;
     text-shadow: -3px 3px 2px rgba(0, 0, 0, 0.23);
@@ -175,17 +163,13 @@
     height: 31px;
     left: 1065px;
     top: 450px;
-
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: 500;
     font-size: 22px;
     line-height: 140%;
-    /* identical to box height, or 31px */
-
     text-align: justify;
     letter-spacing: 0.015em;
-
     color: #000000;
 }
 
@@ -200,4 +184,72 @@
     background: rgba(255, 255, 255, 0.52);
     border: 1px solid #000000;
     border-radius: 4px;
+}
+
+.li-price
+{
+    list-style-type: none;
+}
+
+.li-buy
+{
+    list-style-type: none;
+}
+.button-price:hover{
+    box-shadow: 0 0 15px #E74545, 0 0 10px #e79345;
+}
+
+
+
+.button-buy:hover {
+    box-shadow: 0 0 15px #e79345, 0 0 10px #E74545;
+}
+
+.button-buy:hover
+{
+    transform: translate(0, 0) perspective(500px) rotateY(15deg);
+}
+.text-buy:hover{
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.23);
+}
+
+.button-buy:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e79345, transparent, #fff, transparent, #e79345);
+    transition: .3s;
+}
+.button-buy:hover:before
+{
+    left: 100%;
+}
+
+.button-price:hover
+{
+    transform: translate(0, 0) perspective(500px) rotateY(-15deg);
+}
+.text-price:hover{
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.23);
+
+}
+
+.button-price:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#E74545, transparent, #fff, transparent, #E74545);
+    transition: .3s;
+}
+.button-price:hover:before
+{
+    left: 100%;
 }

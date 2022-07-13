@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.text-login
+{
+    left: 35%;
+    top: 10%;
+    position: absolute;
+    width: 115px;
+    height: 48px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 48px;
+    color: #000000;
+}
+.span-login
+{
+    position: relative;
+    display: block;
+    margin-bottom: 140px;
+    min-width: 500px;
+    min-height: 500px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+.form-label
+{
+    position: relative;
+    left: 8%;
+    top: 120px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.form-input-login
+{
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    top: 120px;
+    width: 420px;
+    height: 40px;
+    border: none;
+    border-bottom: 4px solid #ccc;
+    background: #FFFFFF;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    font-size: 18px;
+}
+.help-password
+{
+    position: relative;
+    left: 67%;
+    top: 110px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+.button-login
+{
+    left: 8%;
+    top: 62%;
+    font-size: 50px;
+    position: absolute;
+    width: 420px;
+    height: 55px;
+    background: linear-gradient(90deg, #2400FF 0%, #FF0099 100%);
+    border-radius: 30px;
+    z-index: 1;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 800;
+    line-height: 17px;
+    border: none;
+}
+
+.field-registration
+{
+    position: absolute;
+    left: 25%;
+    top: 75%;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}

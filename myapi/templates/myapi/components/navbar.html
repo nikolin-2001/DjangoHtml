@@ -14,18 +14,42 @@
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
         Catalog</a></li>
-        <li class="li-navbar"><a class="a-navbar" href="#">
-            <span class="span-navbar"></span>
-            <span class="span-navbar"></span>
-            <span class="span-navbar"></span>
-            <span class="span-navbar"></span>
-        Bascket</a></li>
-        <li class="li-navbar"><a class="a-navbar" href="#">
+        <li class="li-navbar"><a class="a-navbar" href="{% url 'about' %}">
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
             <span class="span-navbar"></span>
         About</a></li>
+				{% if request.user.is_authenticated %}
+        <li class="li-navbar"><a class="a-navbar" href="{% url 'index' %}">
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            {{user.username}}</a>
+         <a class="a-navbar" href="{% url 'logout' %}">
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            Выйти</a>
+        </li>
+				{% else %}
+        <li class="li-navbar"><a class="a-navbar" href="{% url 'register' %}">
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            Regist</a>
+            <a class="a-navbar" href="{% url 'login' %}">
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            <span class="span-navbar"></span>
+            Login</a>
+        </li>
+				{% endif %}
+
     </ul>
 </header>
 <section class="banner"></section>
